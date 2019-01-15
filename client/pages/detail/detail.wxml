@@ -1,0 +1,14 @@
+<!--pages/detail/detail.wxml-->
+<view class="detail-page">
+    <view class="detail-main-box">
+        <image class="film-poster" src="{{filmDetail.image}}"></image>
+        <view class="film-synopsis">
+            <view class="film-name">{{filmDetail.title}}</view>
+            <view class="film-main">{{filmDetail.description}}</view>
+        </view>
+        <view class="film-review-btns">
+            <button data-id="{{filmDetail.id}}" bind:tap="onTapFilmReviewList"><i class="fa fa-eye"></i>查看影评</button>
+            <button data-id="{{filmDetail.id}}" bind:tap="onTapAddFilmReview"><i class="fa fa-comments-o"></i>添加影评</button>
+        </view>
+    </view>
+</view>

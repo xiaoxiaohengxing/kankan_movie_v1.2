@@ -1,0 +1,17 @@
+<!--pages/filmReviewList/filmReviewList.wxml-->
+<view class="film-review-list-page">
+    <view class="film-review-list" >
+        <block wx:for="{{reviewList}}">
+            <view class="film-review-item" data-reviewid="{{item.review_id}}" data-id="{{item.id}}" data-user="{{item.user}}" bind:tap="onTapToFilmReviewDetail">
+                <view>
+                    <image class="avatar" src="{{item.avatar}}"></image>
+                    <text>{{item.userName}}的影评</text>
+                </view>
+                <view class="film-review-text">{{item.content}}</view>
+            </view>
+        </block>
+    </view>
+    <view class="bottom-navigation" bind:tap="goBackIndex">
+        <view >回到首页</view>
+    </view>
+</view>

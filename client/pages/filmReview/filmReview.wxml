@@ -1,0 +1,34 @@
+<!--pages/filmReview/filmReview.wxml-->
+<view class="detail-page">
+    <view class="detail-main-box">
+        <image class="film-poster" src="{{filmDetail.image}}"></image>
+        <view class="film-synopsis">
+            <view class="film-name">{{filmDetail.title}}</view>
+            <view>
+                <image class="avatar" src="{{userInfo.avatarUrl}}"></image>
+                <text>{{userInfo.nickName}}的影评</text>
+            </view>
+            <view class="commit-text">
+                <view class="quote">"</view>
+                <view class="film-main">
+                    {{reviewDetail.content}}
+                </view>
+                <!-- todo:样式调整。及播放功能 -->
+                <button class="tape" bind:touchstart="start" bind:touchend="stop">
+                    <i class="fa fa-microphone"></i>
+                    录音
+                </button>
+            </view>
+        </view>
+        <view class="film-review-btns">
+            <button bind:tap="onTapAgainEdit">
+                <i class="fa fa-mail-reply-all"></i>
+                重新编辑
+            </button>
+            <button bind:tap="onTapRelease">
+                <i class="fa fa-paper-plane"></i>
+                发布影评
+            </button>
+        </view>
+    </view>
+</view>
